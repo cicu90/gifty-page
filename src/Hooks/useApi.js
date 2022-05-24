@@ -18,8 +18,6 @@ const useApi = (url) => {
                 .catch(error => console.log(error))
         }
 
-
-
         fetchApi();
     }, [url])
 
