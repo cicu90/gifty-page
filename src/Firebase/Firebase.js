@@ -27,16 +27,15 @@ export const auth = getAuth();
 export async function signInWithEmail(email, password) {
   console.log(auth)
   return signInWithEmailAndPassword(auth, email, password)
-
 }
 
-export async function signFirebase(email, password) {
-  return createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    saveUserData(userCredential.user.uid, userCredential.user.accessToken);
-    return userCredential.user.uid;
-})
-  .catch((error) => {
-    throw new Error("Error code: " + error.code + " - " + error.message)
-  });
-}
+// export async function signFirebase(email, password) {
+//   return createUserWithEmailAndPassword(auth, email, password)
+//   .then((userCredential) => {
+//     saveUserData(userCredential.user.uid, userCredential.user.accessToken);
+//     return userCredential.user.uid;
+// })
+//   .catch((error) => {
+//     throw new Error("Error code: " + error.code + " - " + error.message)
+//   });
+// }
