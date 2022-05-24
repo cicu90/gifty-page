@@ -1,0 +1,12 @@
+.UserPhoto{
+  display: flex;
+  align-items: center;
+}
+.User-Avatar{
+  vertical-align: middle;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border-color: rgb(197, 95, 206);
+  border-style: outset;
+}

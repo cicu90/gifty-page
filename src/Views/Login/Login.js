@@ -2,8 +2,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import './Login.scss';
 
 import { signInWithEmail } from "../../Firebase/Firebase";
+import Logo from "../../Component/Logo/Logo";
 
 const Login = ({isLogged}) => {
   const navigate = useNavigate();
@@ -41,15 +43,18 @@ const Login = ({isLogged}) => {
   }
 
   return (
-    <div>
+    <div className="login-container">
       <Formik
       initialValues = {initialValues}
       validate = {validate}
       onSubmit = {onSubmit}
       >
-        <Form>
+        <Form className="form-container">
+        <Logo/>
+          <label>Email:</label>
           <Field type="email" name="email" />
           <ErrorMessage name="email" component="div" />
+          <label>Password:</label>
           <Field type="password" name="password" />
           <ErrorMessage name="password" component="div" />
           <button type="submit" disabled={false}>
