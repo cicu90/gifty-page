@@ -3,7 +3,6 @@ import "./Home.scss";
 import AddGifs from '../../Component/AddGifs/AddGifs';
 import PrintGifs from '../../Component/PrintGifs/PrintGifs';
 import Header from '../../Component/Header/Header';
-import User from '../User/user';
 
 function Home() {
   const [addGifs, setaddGifs] = useState("");
