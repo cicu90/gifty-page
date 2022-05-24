@@ -11,8 +11,9 @@ const Header = ({isLogged = false}) => {
       <Logo size="1em"/>
       <div className="Link-Header">
         {isLogged
-        ? <Link to="/logout">Logout</Link>
-        : <Link to="/login">Login</Link>}
+        && <Link to="/login">Login</Link>
+      }
+      <Link to="/logout">Logout</Link>
       </div>
     </div>
   )
