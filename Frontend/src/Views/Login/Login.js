@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import './Login.scss';
 
+import Header from "../../Component/Header/Header";
+
+
 import { signInWithEmail } from "../../Firebase/Firebase";
 import Logo from "../../Component/Logo/Logo";
 
